@@ -1,107 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CellStart - Innovative Solutions</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>CellStart</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#features">Features</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CellStart - Innovative Solutions</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>CellStart</h1>
+      <nav id="navMenu">
+        <a href="#about">About</a>
+        <a href="#features">Features</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <!-- Hamburger button -->
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+    <!-- Overlay for blur -->
+    <div id="overlay"></div>
 
-  <div class="hero">
-    <h2>Innovating the Future of Cellular Technology</h2>
-    <p>CellStart empowers businesses and individuals with next-gen solutions.</p>
-    <a href="#contact" class="btn">Get Started</a>
-  </div>
-
-  <section id="about">
-    <h3>About CellStart</h3>
-    <div class="about">
+    <div class="hero">
+      <h2>Innovating the Future of Cellular Technology</h2>
       <p>
-        At CellStart, we believe in revolutionizing connectivity. 
-        Our mission is to design modern, sustainable, and scalable 
-        cellular solutions that empower growth and efficiency. 
-        We work with clients globally, delivering innovative ideas 
-        to life through teamwork and creativity.
+        CellStart empowers businesses and individuals with next-gen solutions.
       </p>
+      <a href="#contact" class="btn">Get Started</a>
     </div>
-  </section>
 
-  <section id="features">
-    <h3>Our Features</h3>
-    <div class="features">
-      <div class="card">
-        <h4>Fast Connectivity</h4>
-        <p>Experience seamless data transfer and high-speed performance with our optimized solutions.</p>
+    <section id="about">
+      <h3>About CellStart</h3>
+      <div class="about">
+        <p>
+          At CellStart, we believe in revolutionizing connectivity. Our mission
+          is to design modern, sustainable, and scalable cellular solutions that
+          empower growth and efficiency. We work with clients globally,
+          delivering innovative ideas to life through teamwork and creativity.
+        </p>
       </div>
-      <div class="card">
-        <h4>🔒 Secure Network</h4>
-        <p>Security is our priority. We provide robust encryption and privacy features to keep your data safe.</p>
+    </section>
+
+    <section id="features">
+      <h3>Our Features</h3>
+      <div class="features">
+        <div class="card">
+          <h4>Fast Connectivity</h4>
+          <p>
+            Experience seamless data transfer and high-speed performance with
+            our optimized solutions.
+          </p>
+        </div>
+        <div class="card">
+          <h4>🔒 Secure Network</h4>
+          <p>
+            Security is our priority. We provide robust encryption and privacy
+            features to keep your data safe.
+          </p>
+        </div>
+        <div class="card">
+          <h4>🌍 Global Reach</h4>
+          <p>
+            Our technology is built for worldwide adoption, connecting
+            businesses across borders effortlessly.
+          </p>
+        </div>
       </div>
-      <div class="card">
-        <h4>🌍 Global Reach</h4>
-        <p>Our technology is built for worldwide adoption, connecting businesses across borders effortlessly.</p>
+    </section>
+
+    <section id="contact">
+      <h3>Contact Us</h3>
+      <form
+        id="contactForm"
+        style="max-width: 500px; margin: auto; text-align: left"
+      >
+        <label for="name">Name:</label><br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          style="width: 100%; padding: 10px; margin-bottom: 15px"
+        /><br />
+
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          style="width: 100%; padding: 10px; margin-bottom: 15px"
+        /><br />
+
+        <label for="message">Message:</label><br />
+        <textarea
+          id="message"
+          name="message"
+          rows="4"
+          required
+          style="width: 100%; padding: 10px; margin-bottom: 15px"
+        ></textarea
+        ><br />
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+
+      <!-- Thank you message -->
+      <p
+        id="formResponse"
+        style="
+          color: green;
+          font-weight: bold;
+          display: none;
+          margin-top: 10px;
+          text-align: center;
+        "
+      >
+        ✅ Thank you! Your message has been received.
+      </p>
+    </section>
+
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("formResponse").style.display = "block";
+          this.reset();
+        });
+    </script>
+
+    <footer>
+      <p>&copy; 2025 CellStart. All Rights Reserved.</p>
+      <p>Made with ❤️ by the CellStart Dev Team</p>
+      <div style="margin-top: 10px">
+        <a
+          href="https://www.linkedin.com/in/lalit-sahu-45788725a/"
+          style="margin: 0 10px; color: white"
+          >LinkedIn</a
+        >
+        <a
+          href="https://github.com/LalitKumarSahu"
+          style="margin: 0 10px; color: white"
+        >
+          Github</a
+        >
+        <a
+          href="https://www.facebook.com/lalit.kumar.sahu.226141"
+          style="margin: 0 10px; color: white"
+          >Facebook</a
+        >
       </div>
-    </div>
-  </section>
+    </footer>
 
- <section id="contact">
-  <h3>Contact Us</h3>
-  <form id="contactForm" style="max-width: 500px; margin: auto; text-align: left;">
-    <label for="name">Name:</label><br>
-    <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+    <script>
+      document
+        .getElementById("contactForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          document.getElementById("formResponse").style.display = "block";
+          this.reset();
+        });
+      const menuToggle = document.getElementById("menuToggle");
+      const navMenu = document.getElementById("navMenu");
+      const overlay = document.getElementById("overlay");
 
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px;"><br>
+      menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+        menuToggle.classList.toggle("active");
+        overlay.classList.toggle("active");
+      });
 
-    <label for="message">Message:</label><br>
-    <textarea id="message" name="message" rows="4" required style="width:100%; padding:10px; margin-bottom:15px;"></textarea><br>
-
-    <button type="submit" class="btn">Send Message</button>
-  </form>
-
-  <!-- Thank you message -->
-  <p id="formResponse" style="color: green; font-weight: bold; display:none; margin-top:10px; text-align:center;">
-    ✅ Thank you! Your message has been received.
-  </p>
-</section>
-
-<script>
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("formResponse").style.display = "block";
-    this.reset();
-  });
-</script>
-
-
-<footer>
-  <p>&copy; 2025 CellStart. All Rights Reserved.</p>
-  <p>Made with ❤️ by the CellStart Dev Team</p>
-  <div style="margin-top:10px;">
-    <a href="https://www.linkedin.com/in/lalit-sahu-45788725a/" style="margin:0 10px; color:white;">LinkedIn</a>
-    <a href="https://github.com/LalitKumarSahu" style="margin:0 10px; color:white;"> Github</a>
-    <a href="https://www.facebook.com/lalit.kumar.sahu.226141" style="margin:0 10px; color:white;">Facebook</a>
-  </div>
-</footer>
-
-
-  <script>
-  document.getElementById("contactForm").addEventListener("submit", function(e){
-    e.preventDefault();
-    document.getElementById("formResponse").style.display = "block";
-    this.reset();
-  });
-</script>
-</body>
+      // Close menu if overlay is clicked
+      overlay.addEventListener("click", () => {
+        navMenu.classList.remove("show");
+        menuToggle.classList.remove("active");
+        overlay.classList.remove("active");
+      });
+    </script>
+  </body>
 </html>
-
-
